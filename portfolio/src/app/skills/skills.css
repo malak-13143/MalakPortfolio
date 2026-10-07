@@ -1,0 +1,54 @@
+.skill-groups{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:clamp(20px,3vw,32px);
+}
+.skill-group h3{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.78rem;
+  text-transform:none;
+  color:var(--ink-soft);
+  margin:0 0 18px;
+  padding-bottom:10px;
+  border-bottom:1px solid var(--line);
+}
+.skill-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  margin-bottom:16px;
+  transition:transform .2s ease;
+}
+.skill-row:hover{transform:translateX(4px);}
+.skill-row .name{
+  font-size:.92rem;
+  position:relative;
+  transition:color .2s ease;
+}
+.skill-row .name::before{
+  content:"";
+  position:absolute;
+  left:-10px;
+  top:50%;
+  width:0;
+  height:1px;
+  background:var(--accent-2);
+  transition:width .25s cubic-bezier(.2,.7,.2,1);
+  transform:translateY(-50%);
+}
+.skill-row:hover .name{color:var(--accent-2);}
+.skill-row:hover .name::before{width:6px;}
+
+@media (max-width:900px){
+  .skill-groups{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media (max-width:560px){
+
+  .skill-groups{
+    grid-template-columns:1fr;
+    gap:24px;
+  }}

@@ -1,0 +1,27 @@
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a routerLink = "/" class="brand" aria-label="Malak home"><span class="dot"></span>malak<span class="mono">.dev</span></a>
+    <div class="nav-scroll">
+      <nav class="links">
+        @if(language.currentLanguage() === 'en'){
+          <a routerLink = "/about"><span>about</span></a>
+          <a routerLink = "/education"><span>education</span></a>
+          <a routerLink = "/skills"><span>skills</span></a>
+          <a routerLink = "/projects"><span>projects</span></a>
+          <a routerLink = "/services"><span>services</span></a>
+          <a routerLink = "/contact"><span>contact</span></a>
+          <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" class="nav-cv"><span>CV ↗</span></a>
+        }
+        @else{
+          <a routerLink = "/about"><span>عني</span></a>
+          <a routerLink = "/education"><span>التعليم</span></a>
+          <a routerLink = "/skills"><span>المهارات</span></a>
+          <a routerLink = "/projects"><span>المشاريع</span></a>
+          <a routerLink = "/services"><span>الخدمات</span></a>
+          <a routerLink = "/contact"><span>تواصل</span></a>
+          <a href="/cv.pdf" target="_blank" rel="noopener noreferrer" class="nav-cv"><span>السيرة ↗</span></a>
+        }
+      </nav>
+    </div>
+  </div>
+</header>

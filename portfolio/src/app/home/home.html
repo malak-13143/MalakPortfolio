@@ -1,0 +1,86 @@
+<section class="hero" id="home">
+
+  <div class="wrap hero-inner">
+
+    @if(language.currentLanguage() === 'en'){
+      <span class="badge reveal"><span class="ping"></span>
+      <span>open to internships &amp; collabs · Cairo, EG</span>
+      </span>
+      <br>
+      <h1 class="display reveal">
+        <span>Hi, I'm Malak.</span>
+        <br>
+        <span>Full-stack developer building complete web experiences.</span>
+      </h1>
+      <br>
+      <p class="hero-lede reveal">
+        <span>Second-year Computer Science student and full-stack developer — I take ideas from a blank canvas to a deployed product, working across front-end, back-end, and everything in between.</span>
+      </p>
+      <br>
+      <div class="cta-row reveal">
+        <a routerLink="/projects" class="btn primary">
+          <span>View projects</span>
+        </a>
+        <a routerLink="/contact" class="btn ghost">
+          <span>Get in touch</span>
+        </a>
+
+      </div>
+      <br>
+      <div class="meta-strip reveal">
+        <span>
+          <span><strong>Based in</strong> Cairo, Egypt</span>
+        </span>
+        <span>
+          <span><strong>Studying at</strong> Capital University</span>
+        </span>
+        <span>
+          <span><strong>Languages</strong> Arabic (native) · English (C1)</span>
+        </span>
+      </div>
+    }
+
+
+    @else{
+      <span class="badge reveal"><span class="ping"></span>
+      <span>متاحة للتدريب والتعاون · القاهرة، مصر</span>
+    </span>
+      <br>
+      <h1 class="display reveal">
+        <span>مرحبًا، أنا ملك.</span>
+        <br>
+        <span>مطوّرة Full-stack ببني تجارب ويب متكاملة.</span>
+      </h1>
+      <br>
+      <p class="hero-lede reveal">
+        <span>طالبة سنة تانية حاسبات ومطوّرة Full-stack — بحوّل الأفكار من صفحة بيضاء لمنتج شغال على الإنترنت، بشتغل على الواجهة الأمامية والخلفية وكل حاجة بينهم.</span>
+      </p>
+      <br>
+      <div class="cta-row reveal">
+        <a routerLink="/projects" class="btn primary">
+        <span>شوف المشاريع</span>
+        </a>
+        <a routerLink="/contact" class="btn ghost">
+          <span>تواصل معايا</span>
+        </a>
+      </div>
+      <br>
+      <div class="meta-strip reveal">
+        <span>
+          <span><strong>مكان الإقامة</strong> القاهرة، مصر</span>
+        </span>
+        <span>
+          <span><strong>بتدرس في</strong> جامعة العاصمة</span>
+        </span>
+        <span>
+          <span><strong>اللغات</strong> عربي (لغة أم) · إنجليزي (C1)</span>
+        </span>
+      </div>
+    }
+
+
+
+
+
+  </div>
+</section>

@@ -1,0 +1,99 @@
+.proj-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));
+  gap:22px;
+}
+.proj-card{
+  border:1px solid var(--line);
+  background:var(--surface);
+  border-radius:4px;
+  padding:26px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  position:relative;
+  overflow:hidden;
+  transition:transform .3s cubic-bezier(.2,.7,.2,1),
+            box-shadow .3s ease,
+            border-color .3s ease;
+}
+.proj-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,
+    color-mix(in srgb, var(--accent-2) 6%, transparent) 0%,
+    transparent 60%);
+  opacity:0;
+  transition:opacity .3s ease;
+  pointer-events:none;
+}
+.proj-card:hover{
+  transform:translateY(-6px);
+  border-color:var(--accent);
+  box-shadow:0 14px 30px color-mix(in srgb, var(--accent) 20%, transparent);
+}
+.proj-card:hover::after{opacity:1;}
+.proj-card::before{
+  content:"";
+  position:absolute; top:14px; right:14px;
+  width:8px; height:8px; border-radius:50%;
+  border:1.5px solid var(--line);
+  transition:border-color .3s ease, transform .3s ease, background .3s ease;
+}
+.proj-card:hover::before{
+  border-color:var(--accent-2);
+  background:var(--accent-2);
+  transform:scale(1.15);
+}
+.tag-row{display:flex; gap:8px; flex-wrap:wrap;}
+.tag{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.7rem;
+  padding:3px 9px;
+  border:1px solid var(--line);
+  border-radius:100px;
+  color:var(--ink-soft);
+  transition:border-color .2s ease, color .2s ease, background .2s ease;
+}
+.proj-card:hover .tag{
+  border-color:color-mix(in srgb, var(--accent-2) 50%, var(--line));
+  color:var(--accent-2);
+}
+.proj-card h3{
+  margin:0;
+  font-size:1.12rem;
+  transition:color .25s ease;
+}
+.proj-card:hover h3{color:var(--accent);}
+.proj-card p{margin:0; color:var(--ink-soft); font-size:.92rem;}
+.stack{
+  margin-top:auto;
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.72rem;
+  color:var(--accent-2);
+  padding-top:12px;
+  border-top:1px dashed var(--line);
+  transition:border-color .3s ease;
+}
+.proj-card:hover .stack{
+  border-color:color-mix(in srgb, var(--accent-2) 40%, var(--line));
+}
+
+@media (max-width:560px){
+
+  .proj-grid{
+    gap:16px;
+  }
+  .proj-card{
+    padding:22px;
+  }}
+
+  @media (max-width:380px){
+
+  .proj-card h3{
+    font-size:.98rem;
+  }
+  .proj-card p{
+    font-size:.85rem;
+  }}

@@ -1,0 +1,81 @@
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    @if(language.currentLanguage() === 'en'){
+      <div>
+        <div class="avatar" aria-hidden="true">
+          <img src="me.jpg" alt="" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('avatar-empty');">
+          <span class="avatar-label mono">
+            <span>my photo</span>
+          </span>
+        </div>
+        <ul class="about-list">
+          <li>
+            <span><strong>Status</strong> Second-year CS student</span>
+          </li>
+          <li>
+            <span><strong>Focus</strong> Full-stack development</span>
+          </li>
+          <li>
+            <span><strong>Based</strong> Cairo, Egypt</span>
+          </li>
+          <li>
+            <span><strong>Speaks</strong> Arabic · English</span>
+          </li>
+        </ul>
+      </div>
+      <div class="about-copy">
+        <p class="kicker">
+          <span>About</span>
+        </p>
+        <p>
+          <span>I'm a second-year Computer Science student at Capital University in Cairo, and a full-stack developer who enjoys building things end-to-end — from a database schema to a polished user interface.</span>
+        </p>
+        <p>
+          <span>On the front-end I work with HTML, CSS, JavaScript, TypeScript, and Angular. On the back-end I build with Node.js, Express, and MongoDB. I also work with Python for scripting and mobile apps using Flet. I keep my projects organized with Git and GitHub.</span>
+        </p>
+        <p>
+          <span>Beyond code, I've completed a business entrepreneurship training — so I like thinking about the product as a whole, not just the technical side.</span>
+        </p>
+      </div>
+      }
+      @else{
+      <div>
+        <div class="avatar" aria-hidden="true">
+          <img src="me.jpg" alt="" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('avatar-empty');">
+          <span class="avatar-label mono">
+            <span>صورتي</span>
+          </span>
+        </div>
+        <ul class="about-list">
+          <li>
+            <span><strong>الحالة</strong> طالبة سنة تانية حاسبات</span>
+          </li>
+          <li>
+            <span><strong>التركيز</strong> تطوير Full-stack</span>
+          </li>
+          <li>
+            <span><strong>المكان</strong> القاهرة، مصر</span>
+          </li>
+          <li>
+            <span><strong>بتتكلم</strong> عربي · إنجليزي</span>
+          </li>
+        </ul>
+      </div>
+      <div class="about-copy">
+        <p class="kicker">
+          <span>نبذة عني</span>
+        </p>
+        <p>
+          <span>أنا طالبة سنة تانية حاسبات في جامعة العاصمة بالقاهرة، ومطوّرة Full-stack بحب أبني الحاجة من الألف للياء — من تصميم قاعدة البيانات لحد واجهة المستخدم النهائية.</span>
+        </p>
+        <p>
+          <span>في الواجهة الأمامية بشتغل بـ HTML وCSS وJavaScript وTypeScript وAngular. وفي الواجهة الخلفية ببني بـ Node.js وExpress وMongoDB. وكمان بستخدم Python في السكريبتات وتطبيقات الموبايل بـ Flet. وبنظّم مشاريعي بـ Git وGitHub.</span>
+        </p>
+        <p>
+          <span>بعيدًا عن الكود، خلّصت تدريب في ريادة الأعمال — عشان كده بحب أفكر في المنتج ككل، مش بس الجانب التقني.</span>
+        </p>
+      </div>
+      }
+
+  </div>
+</section>

@@ -1,0 +1,120 @@
+<section class="section alt" id="contact">
+  <div class="wrap contact-grid">
+    @if(language.currentLanguage() === 'en'){
+    <div>
+      <p class="kicker">
+        <span>Contact</span>
+      </p>
+      <h2 class="h">
+        <span>Let's talk</span>
+      </h2>
+      <p class="contact-intro">
+        <span>Open to internships, freelance work, or collaborations on web and mobile projects. The quickest way to reach me is by email.</span>
+      </p>
+      <ul class="contact-links">
+        <li><a href="mailto:malakmostafa.13143@gmail.com">
+          <span><span>Email</span></span>
+          <span class="k">malakmostafa.13143@gmail.com</span>
+        </a></li>
+        <li><a href="https://github.com/malak-13143" target="_blank" rel="noopener noreferrer">
+          <span>GitHub</span>
+          <span class="k">/malak-13143</span>
+        </a></li>
+        <li><a href="https://www.linkedin.com/in/malak-mostafa-abab4138b" target="_blank" rel="noopener noreferrer">
+          <span>LinkedIn</span>
+          <span class="k">/in/malak-mostafa</span>
+        </a></li>
+        <li><a href="https://wa.me/201099285292" target="_blank" rel="noopener noreferrer">
+          <span>WhatsApp</span>
+          <span class="k">+20 109 928 5292</span>
+        </a></li>
+        <li><a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+          <span><span>CV</span></span>
+          <span class="k">PDF ↗</span>
+        </a></li>
+      </ul>
+    </div>
+    <form id="contactForm" action="mailto:malakmostafa.13143@gmail.com" method="post" enctype="text/plain">
+      <div>
+        <label for="cf-name">
+          <span>Name</span>
+        </label>
+        <input id="cf-name" name="name" type="text" required autocomplete="name">
+      </div>
+      <div>
+        <label for="cf-email">
+          <span>Email</span>
+        </label>
+        <input id="cf-email" name="email" type="email" required autocomplete="email">
+      </div>
+      <div>
+        <label for="cf-msg">
+          <span>Message</span>
+        </label>
+        <textarea id="cf-msg" name="message" required autocomplete="off"></textarea>
+      </div>
+      <button type="submit" class="submit">
+        <span>Send message</span>
+      </button>
+    </form>
+    } @else{
+    <div>
+      <p class="kicker">
+        <span>تواصل</span>
+      </p>
+      <h2 class="h">
+        <span>يلا نتكلم</span>
+      </h2>
+      <p class="contact-intro">
+        <span>متاحة للتدريب، العمل الحر، أو التعاون في مشاريع ويب وموبايل. أسرع طريقة توصليني بيها هي الإيميل.</span>
+      </p>
+      <ul class="contact-links">
+        <li><a href="mailto:malakmostafa.13143@gmail.com">
+          <span><span>إيميل</span></span>
+          <span class="k">malakmostafa.13143@gmail.com</span>
+        </a></li>
+        <li><a href="https://github.com/malak-13143" target="_blank" rel="noopener noreferrer">
+          <span>GitHub</span>
+          <span class="k">/malak-13143</span>
+        </a></li>
+        <li><a href="https://www.linkedin.com/in/malak-mostafa-abab4138b" target="_blank" rel="noopener noreferrer">
+          <span>LinkedIn</span>
+          <span class="k">/in/malak-mostafa</span>
+        </a></li>
+        <li><a href="https://wa.me/201099285292" target="_blank" rel="noopener noreferrer">
+          <span>WhatsApp</span>
+          <span class="k">+20 109 928 5292</span>
+        </a></li>
+        <li><a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
+          <span><span>السيرة الذاتية</span></span>
+          <span class="k">PDF ↗</span>
+        </a></li>
+      </ul>
+    </div>
+    <form id="contactForm" action="mailto:malakmostafa.13143@gmail.com" method="post" enctype="text/plain">
+      <div>
+        <label for="cf-name">
+          <span>الاسم</span>
+        </label>
+        <input id="cf-name" name="name" type="text" required autocomplete="name">
+      </div>
+      <div>
+        <label for="cf-email">
+          <span>الإيميل</span>
+        </label>
+        <input id="cf-email" name="email" type="email" required autocomplete="email">
+      </div>
+      <div>
+        <label for="cf-msg">
+          <span>الرسالة</span>
+        </label>
+        <textarea id="cf-msg" name="message" required autocomplete="off"></textarea>
+      </div>
+      <button type="submit" class="submit">
+        <span>ابعت الرسالة</span>
+      </button>
+    </form>
+    }
+
+  </div>
+</section>

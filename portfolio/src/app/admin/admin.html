@@ -1,0 +1,34 @@
+<h1>Admin Dashboard</h1>
+
+<button (click)="selectedSection = 'projects'">Projects</button>
+<button (click)="selectedSection = 'skills'">Skills</button>
+<button (click)="selectedSection = 'services'">Services</button>
+<button (click)="selectedSection = 'education'">Education</button>
+
+@if(selectedSection === 'projects'){
+  <h2>Project Manegment</h2>
+  <input type="text" placeholder="Project name" [(ngModel)]="projectName">
+  <textarea placeholder="Project description" [(ngModel)]="projectDesc"></textarea>
+  <input type="text" placeholder="Technology" [(ngModel)]="technologyName">
+  <button (click)="addProject()">Add Project</button>
+}
+@if(selectedSection === 'skills'){
+  <h2>Skills Manegment</h2>
+  <input type="text" placeholder="Skill name" [(ngModel)]="skillName">
+  <textarea placeholder="Skill description" [(ngModel)]="skillDesc"></textarea>
+  <input type="text" placeholder="Category name" [(ngModel)]="categorySName">
+  <button (click)="addSkill()">Add Skill</button>
+}
+@if(selectedSection === 'services'){
+  <h2>Services Manegment</h2>
+  <input type="text" placeholder="Service name" [(ngModel)]="serviceName">
+  <textarea placeholder="Service description" [(ngModel)]="serviceDesc"></textarea>
+  <button (click)="addService()">Add Service</button>
+}
+@if(selectedSection === 'education'){
+  <h2>Education Manegment</h2>
+  <input type="text" placeholder="Training name" [(ngModel)]="trainingName">
+  <textarea placeholder="Training description" [(ngModel)]="trainingDesc"></textarea>
+  <input type="text" placeholder="Category name" [(ngModel)]="categoryEName">
+  <button (click)="addTraining()">Add Training</button>
+}

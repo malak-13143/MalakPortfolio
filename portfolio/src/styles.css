@@ -1,0 +1,146 @@
+/* =========================================================
+  BASE / VARIABLES
+   ========================================================= */
+:root{
+  --bg:#F7F5FB;
+  --bg-alt:#EDE8F6;
+  --surface:#FFFFFF;
+  --ink:#3D4066;
+  --ink-soft:color-mix(in srgb, #3D4066 65%, #EDE8F6 35%);
+  --accent:#5A5F9C;
+  --accent-2:#D0A876;
+  --line:color-mix(in srgb, #5A5F9C 24%, #EDE8F6 76%);
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+  scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#282A50;
+    --bg-alt:color-mix(in srgb, #282A50 85%, #5A5F9C 15%);
+    --surface:color-mix(in srgb, #282A50 90%, #5A5F9C 10%);
+    --ink:#F7F5FB;
+    --ink-soft:color-mix(in srgb, #F7F5FB 70%, #9CA1D6 30%);
+    --accent:#9CA1D6;
+    --accent-2:#D0A876;
+    --line:color-mix(in srgb, #5A5F9C 48%, #282A50 52%);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#282A50;
+  --bg-alt:color-mix(in srgb, #282A50 85%, #5A5F9C 15%);
+  --surface:color-mix(in srgb, #282A50 90%, #5A5F9C 10%);
+  --ink:#F7F5FB;
+  --ink-soft:color-mix(in srgb, #F7F5FB 70%, #9CA1D6 30%);
+  --accent:#9CA1D6;
+  --accent-2:#D0A876;
+  --line:color-mix(in srgb, #5A5F9C 48%, #282A50 52%);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{
+  -webkit-text-size-adjust:100%;
+  scroll-behavior:smooth;
+}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Sora',system-ui,-apple-system,sans-serif;
+  font-size:16px;
+  line-height:1.6;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  overflow-x:hidden;
+  position:relative;
+}
+a{color:inherit}
+img{max-width:100%;display:block}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+.wrap{
+  max-width:1080px;
+  margin:0 auto;
+  padding:0 clamp(16px,4vw,48px);
+}
+
+:focus-visible{
+  outline:2px solid var(--accent-2);
+  outline-offset:3px;
+  border-radius:2px;
+}
+
+
+
+/* =========================================================
+  GENERIC SECTION
+   ========================================================= */
+.section{padding:clamp(48px,9vh,96px) 0;}
+.section.alt{background:var(--bg-alt);}
+.kicker{
+  font-family:'IBM Plex Mono',monospace;
+  font-size:.78rem;
+  color:var(--accent-2);
+  margin:0 0 10px;
+}
+h2.h{
+  font-size:clamp(1.4rem,3.6vw,2.3rem);
+  font-weight:700;
+  letter-spacing:-.01em;
+  margin:0 0 34px;
+  max-width:24ch;
+}
+
+
+/* =========================================================
+  RESPONSIVE — MOBILE (≤ 720px)
+   ========================================================= */
+@media (max-width:720px){
+
+  h2.h{
+    margin-bottom:24px;
+  }
+  .section{
+    padding:clamp(40px,7vh,64px) 0;
+  }
+
+}
+
+/* =========================================================
+  RESPONSIVE — SMALL MOBILE (≤ 560px)
+   ========================================================= */
+@media (max-width:560px){
+
+    .wrap{
+    padding:0 16px;
+  }
+    h1.display{
+    font-size:clamp(1.6rem, 9vw, 2.2rem);
+  }
+}
+
+/* =========================================================
+  RESPONSIVE — TINY (≤ 380px)
+   ========================================================= */
+@media (max-width:380px){
+
+  h2.h{
+    font-size:1.3rem;
+  }
+  .kicker{
+    font-size:.72rem;
+  }
+}
+
+/* =========================================================
+  REDUCED MOTION
+   ========================================================= */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+}
+
+
+
